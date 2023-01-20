@@ -1,0 +1,103 @@
+$fontitulo:'Sofia', cursive;
+$font:'Calistoga', cursive;
+$boxshadow : 10px 10px 28px 1px rgba(0, 0, 0, 0.781);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .5s
+}
+body{
+    text-align: center;
+    background-image: url("../media/fondo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 1.5rem;
+    height: 100vh;
+    color: black
+}
+.container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: fit-content;
+    width: 800px;
+    padding: 20px;
+    margin: 30px;
+    border-radius: .5rem;
+    box-shadow: $boxshadow;
+
+}
+#submit, .volver{
+    width: 40%;
+    font-size: 1.5rem;
+    font-family: $font;
+    padding: 5px;
+    border-radius: .5rem;
+    background-color: white;
+    cursor: pointer;
+    border: solid 1px;
+    box-shadow: $boxshadow;
+}
+#question, h1, h2{
+    font-family: $font;
+    padding: 4px;
+}
+
+ul li{
+    font-family: $font;
+    text-align: left;
+
+}
+ul{
+    list-style: none;
+    list-style-position: left;
+    width: max-content;
+}
+#imagen img{
+    width: 750px;
+    height: 300px;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.answer{
+    display: none;
+}
+.label {
+	cursor: pointer;
+	font-size: 20px;
+	position: relative;
+}
+
+.label:before {
+	content: '';
+	background-color: rgba(111, 147, 245, 0.384);
+	border: 1px solid rgb(152, 128, 240);
+	border-radius: .2rem;
+	display: inline-block;
+	position: absolute;
+	left: -30px;
+	width: 20px;
+	height: 20px;
+}
+
+.label:after {
+	color: #2e53cc;
+	content: '\2BCC';
+    font-size: 2rem;
+	display: inline-block;
+	position: absolute;
+	left: -33px;
+    top: -15px;
+	transform: scale(0);
+	transition: transform 0.2s linear;
+}
+
+.answer:checked + .label:after {
+	transform: scale(.8);
+}

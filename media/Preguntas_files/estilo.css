@@ -1,0 +1,111 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+body {
+  text-align: center;
+  background-image: url("../media/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-size: 1.5rem;
+  height: 100vh;
+  color: black;
+}
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 800px;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 28px 1px rgba(0, 0, 0, 0.781);
+}
+
+#submit {
+  width: 40%;
+  font-size: 1.5rem;
+  font-family: "Calistoga", cursive;
+  padding: 5px;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  border: solid 1px;
+  box-shadow: 10px 10px 28px 1px rgba(0, 0, 0, 0.781);
+}
+
+#question, h1 {
+  font-family: "Calistoga", cursive;
+  padding: 4px;
+}
+
+ul li {
+  font-family: "Calistoga", cursive;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  list-style-position: left;
+  width: 40%;
+}
+
+#imagen img {
+  width: 750px;
+  height: 300px;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "✔";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.2s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
