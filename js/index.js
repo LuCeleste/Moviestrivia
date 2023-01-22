@@ -141,7 +141,6 @@ function deselectAnswers(){
 
 
 submit.addEventListener("click", ()=>{
-
   const answer = getSelected();
   if(answer){
     if (answer === quiz[currentQuiz].correct){
@@ -152,9 +151,23 @@ submit.addEventListener("click", ()=>{
       loadQuiz();
     }else{
       quizCont.innerHTML =  `
-      <h2> Respuestas correctas: ${score} de ${quiz.length}</h2>
+      <h2> Respuestas correctas: </h2>
+      <ul class="correctas">
+      <li>¿Cómo se llama el lugar a dónde quieren que viajar Ellie y Carl de UP?: Cataratas Paraiso  </li>
+      <li>De las siguientes películas ¿cuál no es de Disney?: Mi villano favorito  </li>
+      <li>¿Como llama Celia a Mike?: Cuchurrumi  </li>
+      <li>¿Qué animal piensa Lilo que es Stitch a la hora de adoptarlo?: Perro  </li>
+      <li>¿Por qué se alistó Mulán en el Ejército Imperial?: Para evitar que su padre se enlistara  </li>
+      <li>¿Cuál es el nombre de las hermanas protagonistas de 'Frozen'?: Ana y Elsa  </li>
+      <li>¿Cual es el poder de Dash?: Super Velocidad  </li>
+      <li>¿A qué cantante le gusta Lilo?: Elvis </li>
+      <li>¿Cómo se llama el amigo de Winnie The Pooh?: Christopher </li>
+      <li> ¿En que animal se convierte Yzma al final de la película?: Gato </li>
+      </ul>
+      <h3> Puntaje: ${score} de ${quiz.length} </h3>
       <button class="volver" onclick = "location.reload()"> Volver a intentar</button>
       `
     }
   }
 });
+
